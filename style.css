@@ -1,0 +1,791 @@
+/*==================================================
+RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Outfit',sans-serif;
+
+    background:#F5F2EC;
+
+    color:#111111;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+}
+
+
+
+/*==================================================
+VARIABLES
+==================================================*/
+
+:root{
+
+    --bg:#F5F2EC;
+
+    --text:#111111;
+
+    --grey:#666666;
+
+    --white:#FFFFFF;
+
+    --container:1200px;
+
+}
+
+
+
+/*==================================================
+COMMON
+==================================================*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+
+
+
+
+/*==================================================
+HEADER
+==================================================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:82px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 24px;
+
+    z-index:1000;
+
+    transition:.35s;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    letter-spacing:5px;
+
+    color:#111;
+
+}
+
+
+
+
+
+/*==================================================
+MENU
+==================================================*/
+
+.menu{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    background:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+    cursor:pointer;
+
+}
+
+.menu span{
+
+    width:24px;
+
+    height:2px;
+
+    background:#111;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+/*==================================================
+BACKGROUND
+==================================================*/
+
+.hero-background{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+}
+
+.background{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+
+
+
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.hero .container{
+
+    position:relative;
+
+    height:100%;
+
+    z-index:5;
+
+}
+
+.hero-content{
+
+    position:absolute;
+
+    top:110px;
+
+    left:0;
+
+    max-width:420px;
+
+}
+
+
+
+
+
+.hero-tag{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    color:#666;
+
+}
+
+
+
+
+
+.hero-title{
+
+    font-size:62px;
+
+    font-weight:500;
+
+    line-height:.92;
+
+    letter-spacing:-3px;
+
+    margin-bottom:22px;
+
+}
+
+
+
+
+
+.hero-description{
+
+    max-width:340px;
+
+    font-size:18px;
+
+    line-height:1.75;
+
+    color:#666;
+
+}
+
+/*==================================================
+BAGS LAYER
+==================================================*/
+
+.hero-bags{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    z-index:4;
+
+    pointer-events:none;
+
+}
+
+.bags{
+
+    width:min(115vw,680px);
+
+    height:auto;
+
+    object-fit:contain;
+
+    object-position:center bottom;
+
+    transform-origin:center bottom;
+
+    will-change:transform;
+
+}
+
+
+
+/*==================================================
+LIGHTING
+==================================================*/
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 75% 20%,
+    rgba(255,255,255,.55),
+    transparent 45%),
+
+    linear-gradient(
+    to bottom,
+    rgba(255,255,255,.12),
+    rgba(255,255,255,0)
+    );
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+/*==================================================
+BOTTOM FADE
+==================================================*/
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:180px;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(245,242,236,0),
+        rgba(245,242,236,.95),
+        #F5F2EC
+    );
+
+    z-index:6;
+
+}
+
+
+
+
+
+/*==================================================
+SCROLL INDICATOR
+==================================================*/
+
+.scroll-indicator{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:38px;
+
+    transform:translateX(-50%);
+
+    z-index:20;
+
+}
+
+.mouse{
+
+    width:28px;
+
+    height:48px;
+
+    border:1.5px solid rgba(17,17,17,.25);
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding-top:8px;
+
+}
+
+.wheel{
+
+    width:4px;
+
+    height:8px;
+
+    border-radius:10px;
+
+    background:#111;
+
+}
+
+
+
+
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+.hero-content{
+
+    top:95px;
+
+    left:0;
+
+    max-width:320px;
+
+}
+
+.hero-title{
+
+    font-size:50px;
+
+}
+
+.hero-description{
+
+    font-size:16px;
+
+    max-width:300px;
+
+}
+
+.bags{
+
+    width:120vw;
+
+    max-width:640px;
+
+}
+
+}
+
+
+
+
+
+@media(max-width:430px){
+
+.hero-title{
+
+    font-size:44px;
+
+}
+
+.hero-description{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.bags{
+
+    width:132vw;
+
+}
+
+.logo{
+
+    font-size:20px;
+
+    letter-spacing:4px;
+
+}
+
+}
+
+
+
+
+
+@media(max-width:360px){
+
+.hero-title{
+
+    font-size:40px;
+
+}
+
+.hero-tag{
+
+    font-size:11px;
+
+}
+
+.hero-description{
+
+    font-size:14px;
+
+}
+
+.bags{
+
+    width:138vw;
+
+}
+
+}
+
+/*==================================================
+MENU ANIMATION
+==================================================*/
+
+.menu{
+
+    transition:.35s ease;
+
+}
+
+.menu span{
+
+    transition:.35s ease;
+
+    transform-origin:center;
+
+}
+
+.menu.active span:nth-child(1){
+
+    transform:translateY(8px) rotate(45deg);
+
+}
+
+.menu.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu.active span:nth-child(3){
+
+    transform:translateY(-8px) rotate(-45deg);
+
+}
+
+
+
+
+
+/*==================================================
+HERO READY FOR GSAP
+==================================================*/
+
+.hero-tag,
+.hero-title,
+.hero-description{
+
+    will-change:transform,opacity;
+
+}
+
+.hero-background{
+
+    will-change:transform;
+
+}
+
+.hero-bags{
+
+    will-change:transform;
+
+}
+
+.bags{
+
+    will-change:transform;
+
+}
+
+
+
+
+
+/*==================================================
+SMOOTH IMAGE RENDERING
+==================================================*/
+
+.background,
+.bags{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+    image-rendering:auto;
+
+}
+
+
+
+
+
+/*==================================================
+SECTION BASE
+==================================================*/
+
+.materials,
+.handles,
+.contact{
+
+    position:relative;
+
+    min-height:100vh;
+
+    background:#F5F2EC;
+
+    overflow:hidden;
+
+}
+
+.materials .container,
+.handles .container,
+.contact .container{
+
+    padding-top:120px;
+
+    padding-bottom:120px;
+
+}
+
+
+
+
+
+/*==================================================
+UTILITY
+==================================================*/
+
+.hidden{
+
+    opacity:0;
+
+}
+
+.fade{
+
+    opacity:1;
+
+    transition:.5s;
+
+}
+
+
+
+
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F5F2EC;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D9D1C8;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#BEB4A8;
+
+}
+
+
+
+
+
+/*==================================================
+TEXT SELECTION
+==================================================*/
+
+::selection{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+
+
+
+
+/*==================================================
+REDUCE MOTION
+==================================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto;
+
+}
+
+}
