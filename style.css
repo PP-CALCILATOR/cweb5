@@ -90,43 +90,59 @@ HEADER
 
     position:fixed;
 
-    top:0;
+    top:16px;
 
-    left:0;
+    left:16px;
 
-    width:100%;
+    right:16px;
 
-    height:82px;
+    height:64px;
 
     display:flex;
 
-    justify-content:space-between;
-
     align-items:center;
 
-    padding:0 24px;
+    justify-content:flex-start;
+
+    padding:0 22px;
+
+    background:rgba(245,242,236,.88);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(0,0,0,.06);
+
+    border-radius:20px;
 
     z-index:1000;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
 .logo{
 
-    font-size:22px;
+    font-size:20px;
 
     font-weight:700;
 
-    letter-spacing:5px;
+    letter-spacing:4px;
 
     color:#111;
 
+    text-decoration:none;
+
+    transition:.3s;
+
 }
 
+.logo:hover{
 
+    opacity:.75;
 
-
+}
 
 /*==================================================
 MENU
@@ -240,7 +256,7 @@ CONTENT
 
     position:absolute;
 
-    top:110px;
+    top:125px;
 
     left:0;
 
