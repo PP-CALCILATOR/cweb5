@@ -1057,3 +1057,430 @@ TEXTURES
 }
 
 }
+
+/*==================================================
+HANDLES
+==================================================*/
+
+.handles{
+
+    padding:140px 0;
+
+    background:#ffffff;
+
+}
+
+.handle-type-grid{
+
+    display:grid;
+
+    gap:24px;
+
+    margin-top:70px;
+
+}
+
+.handle-type{
+
+    background:#F8F6F2;
+
+    border-radius:28px;
+
+    padding:28px;
+
+    text-align:center;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.handle-type:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.handle-type img{
+
+    width:100%;
+
+    border-radius:20px;
+
+}
+
+.handle-type h3{
+
+    font-size:30px;
+
+    margin:28px 0 14px;
+
+    font-weight:500;
+
+}
+
+.handle-type p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+.shape-section{
+
+    margin-top:120px;
+
+}
+
+.shape-section h3{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:50px;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+.shape-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.shape-card{
+
+    background:#F8F6F2;
+
+    border-radius:22px;
+
+    padding:24px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.shape-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.shape-card img{
+
+    width:100%;
+
+}
+
+.shape-card span{
+
+    display:block;
+
+    margin-top:18px;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+@media(min-width:900px){
+
+.handle-type-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.shape-grid{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+}
+
+/*==================================================
+CUSTOMIZATION
+==================================================*/
+
+.customization{
+
+    padding:140px 0;
+
+    background:#F5F2EC;
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    gap:22px;
+
+    margin-top:70px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:40px 30px;
+
+    box-shadow:0 18px 50px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature-number{
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    color:#999;
+
+    margin-bottom:24px;
+
+}
+
+.feature-card h3{
+
+    font-size:28px;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+}
+
+.feature-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+@media(min-width:900px){
+
+.feature-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+
+/*==================================================
+FINAL CTA
+==================================================*/
+
+.final-cta{
+
+    padding:150px 0;
+
+    background:#ffffff;
+
+}
+
+.cta-bag{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:60px;
+
+}
+
+.cta-bag img{
+
+    width:min(100%,420px);
+
+    transition:.6s;
+
+}
+
+.cta-content{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.cta-content h2{
+
+    font-size:52px;
+
+    font-weight:500;
+
+    line-height:1.05;
+
+    margin:25px 0;
+
+}
+
+.cta-content p{
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+.cta-button{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:40px;
+
+}
+
+.whatsapp-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 34px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    border-radius:18px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 20px 40px rgba(37,211,102,.28);
+
+}
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 28px 55px rgba(37,211,102,.38);
+
+}
+
+.whatsapp-btn svg{
+
+    flex-shrink:0;
+
+}
+
+.cta-primary{
+
+    background:#111;
+
+    color:#fff;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.cta-primary:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.cta-secondary{
+
+    border:1px solid #111;
+
+    color:#111;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.cta-secondary:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+@media(min-width:900px){
+
+.cta-buttons{
+
+    justify-content:center;
+
+    flex-direction:row;
+
+}
+
+.cta-primary,
+.cta-secondary{
+
+    width:230px;
+
+}
+
+}
+
