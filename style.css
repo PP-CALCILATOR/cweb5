@@ -923,3 +923,137 @@ THICKNESS
     line-height:1.8;
 
 }
+
+/*==================================================
+TEXTURES
+==================================================*/
+
+.textures{
+
+    padding:140px 0;
+
+    background:#F5F2EC;
+
+}
+
+.texture-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    margin-top:90px;
+
+}
+
+.texture-image{
+
+    position:relative;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:white;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.06);
+
+}
+
+.texture-image img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.magnifier{
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    border:6px solid rgba(255,255,255,.95);
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    backdrop-filter:blur(2px);
+
+    background:rgba(255,255,255,.18);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.texture-info{
+
+    max-width:500px;
+
+}
+
+.texture-info h3{
+
+    font-size:42px;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+
+}
+
+.texture-info p{
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+@media(min-width:900px){
+
+.texture-card{
+
+    display:grid;
+
+    grid-template-columns:1.3fr .7fr;
+
+    align-items:center;
+
+}
+
+.texture-card.reverse{
+
+    grid-template-columns:.7fr 1.3fr;
+
+}
+
+.texture-card.reverse .texture-image{
+
+    order:2;
+
+}
+
+.texture-card.reverse .texture-info{
+
+    order:1;
+
+}
+
+}
